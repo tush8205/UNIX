@@ -1,0 +1,74 @@
+Basic of Unix Commands:
+#Alter Session: alter session set nls_date_format='dd-mm-yyyy':
+
+Copy the File : cp -p <filename>
+
+Delete file : rm -f <filename>
+for multiple file like(log,csv,txt) : rm -rf *.log
+
+Count the File : wc -l <filename>
+
+Split the File :1. split -l count file_name
+                 2.split --verbose -dl --additional-suffix=.txt file_name.txt filename_
+				 
+#Making Directory: mkdir Folder_name 
+
+Listing File : 1.l 
+				2.ls -lrt 
+				3.l *.sql== listing only sql file 
+				4.l *.csv == listing only csv file 
+				5. l *.log  == listing only log file
+Removing ^M char : 1.cat -v filename > filename_1 
+                   2.dos2unix filename
+				   3. tr -d '^M' < filename > filename_1
+
+Change the mode directory or permission : chmod 777 filename
+
+Line number : set nu 
+
+Chnage file name : vm filename newfilename 
+
+Grep the error message or file :  grep -il "errormes" *.log 
+
+shift + G == going to end of file 
+
+control + F == move down / forward 
+
+shift +A == end of the file 
+
+escp dd == delete the current line 
+
+find nad delete == find . -name '*.log' -delete
+ 
+du -sh* == show the file name and  size 
+du -sh 
+ 
+
+Createing tar file :  tar cvf filename.tar filename 
+
+Extracting the File : tar -xvf filename 
+
+zip file : gzip filename
+
+unzip the file : unzip filename 
+
+Replace the value ==  :%s/old/new/g   -enter
+
+Killing process : ps -ef |grep .comfile
+                  cat -v comfile   ( b2k id )
+				  ps - ef |grep idno 
+				  kill -9 idno
+
+Combining Multiple File : cat -v *.csv > new file_name
+                          cat -v filename_1 filename_2 > new_filename 
+
+Merging  Specific error from one , trsnfer to another file : grep -i 'error_name' > new_file 
+
+
+																	
+
+
+ 
+ 
+ 
+
